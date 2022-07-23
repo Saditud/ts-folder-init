@@ -16,6 +16,11 @@
     ],
     "rules": {
         "no-console": "off",
-        "no-plusplus": "off"
+        "no-plusplus": "off",
+        "no-empty": "off",
+        "no-constant-condition": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-vars": "warn",
+        "no-unused-expressions": "off"
     }
 }
