@@ -4,23 +4,49 @@
         "es2021": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-typescript"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "import"
     ],
     "rules": {
-        "no-console": "off",
-        "no-plusplus": "off",
-        "no-empty": "off",
-        "no-constant-condition": "off",
-        "no-underscore-dangle": "off",
-        "no-unused-vars": "warn",
-        "no-unused-expressions": "off"
+        "@typescript-eslint/explicit-function-return-type": "error", // oblige les fonctions à retourner une valeur
+        "@typescript-eslint/no-unused-vars": "warn", // variables non utilisées
+        "@typescript-eslint/indent": [
+            "error",
+            4
+        ], // nb espace par indent
+        "react/jsx-filename-extension": [
+            0
+        ], // erreur étrange sinon
+        "import/extensions": "off", //idem
+        "prefer-const": "warn", // preferer les const
+        "no-param-reassign": "off", // pouvoir reassigner les variable
+        "block-scoped-var": "off", // ne pas bloquer les var
+        "no-var": "off", // laisser les var
+        "no-undef": "off", // pour laisser les undefined
+        "no-plusplus": "off", //pouvoir laisser les "++"
+        "no-console": "off", // a remove pour les console.log()
+        "no-mixed-spaces-and-tabs": "warn", //pas mélanger space et tab
+        "linebreak-style": "off", //empecher le bug quand on change de linux/ window
+        "class-methods-use-this": "off", // laisser les this normaux
+        "no-empty": "off", // empty braces
+        "no-constant-condition": "off", // laisser les while(true)
+        "nonblock-statement-body-position": [
+            "error",
+            "below"
+        ], // si une ligne après condition alors en dessous
+        "curly": "off", // enlève les {} si condition à une ligne
+        "no-useless-constructor": "off", // à laisser pour le ts
+        "no-empty-function": "off", // idem
+        "no-bitwise": "off", // permet de Math.floor()
+        "no-unused-expressions": "off" // permet de faire if avec &&
     }
 }

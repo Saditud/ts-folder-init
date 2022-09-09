@@ -1,24 +1,11 @@
-/* const loading: string[] = ['⠋', '⠙', '⠸', '⠴', '⠦', '⠇'];
+import wait from './wait';
 
-function wait(delay: number) {
-  const time = new Date();
-  time.setMilliseconds(time.getMilliseconds() + delay);
-  while (time >= new Date()) {}
-}
+const loading: string[] = ['⠋', '⠙', '⠸', '⠴', '⠦', '⠇'];
 
-while (true) {
-  loading.forEach((element) => {
-    console.clear();
-    console.log(element);
-    wait(200);
-  });
-}
- */
-
-function wait(delay: number) {
-  (async () => {
-    await new Promise((resolve) => {
-      setTimeout(() => resolve(''), delay);
+while (true) {  
+    loading.forEach((element) => {
+        console.clear();
+        console.log(element);
+        wait(200);
     });
-  })();
 }
