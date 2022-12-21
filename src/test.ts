@@ -1,6 +1,6 @@
-import wait from './wait';
+import wait from "./wait";
 
-const loading: string[] = ['⠋', '⠙', '⠸', '⠴', '⠦', '⠇'];
+const loading: string[] = ["⠋", "⠙", "⠸", "⠴", "⠦", "⠇"];
 
 while (true) {  
     loading.forEach((element) => {

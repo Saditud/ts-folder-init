@@ -47,6 +47,10 @@
         "no-useless-constructor": "off", // à laisser pour le ts
         "no-empty-function": "off", // idem
         "no-bitwise": "off", // permet de Math.floor()
-        "no-unused-expressions": "off" // permet de faire if avec &&
+        "no-unused-expressions": "off", // permet de faire if avec &&
+        "@typescript-eslint/quotes": [
+            "error",
+            "double"
+        ]
     }
 }
